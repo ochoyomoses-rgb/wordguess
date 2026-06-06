@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Privacy Policy · Word Guess</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f7fc;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+      color: #1a2c3e;
+      padding: 2rem 1rem;
+    }
+
+    /* subtle paper texture */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#e9edf2 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .privacy-card {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.03);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    /* modern header gradient */
+    .privacy-header {
+      background: linear-gradient(135deg, #0f2b3d 0%, #1b4f6e 100%);
+      padding: 2.8rem 2.5rem 2rem 2.5rem;
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px 6px 12px;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.2px;
+    }
+
+    .app-badge span {
+      font-size: 1.2rem;
+    }
+
+    .privacy-header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .last-updated {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .last-updated .pill {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 40px;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .content-inner {
+      padding: 2.5rem 2.5rem 3rem 2.5rem;
+    }
+
+    /* typography */
+    h2 {
+      font-size: 1.65rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #0f2b3d;
+      letter-spacing: -0.2px;
+      border-left: 4px solid #2c7da0;
+      padding-left: 1rem;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.6rem 0;
+      color: #1f5068;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #2c4258;
+      font-weight: 450;
+    }
+
+    .highlight-box {
+      background: #f0f6fa;
+      border-left: 4px solid #2c7da0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 20px;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+    }
+
+    ul, ol {
+      margin: 0.8rem 0 1.2rem 1.8rem;
+    }
+
+    li {
+      margin: 0.5rem 0;
+      color: #2c4258;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, #e2e8f0, transparent);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fafcff;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .data-table th {
+      background: #eef3f8;
+      text-align: left;
+      padding: 12px 16px;
+      font-weight: 600;
+      color: #1f5068;
+    }
+
+    .data-table td {
+      border-top: 1px solid #e6edf4;
+      padding: 12px 16px;
+      color: #2c3e4e;
+    }
+
+    .contact-email {
+      background: #f8fafd;
+      padding: 1rem 1.5rem;
+      border-radius: 24px;
+      display: inline-block;
+      font-family: monospace;
+      font-size: 1rem;
+      border: 1px solid #dce5ec;
+      margin: 0.5rem 0;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 2.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e2edf5;
+      font-size: 0.8rem;
+      color: #5e7e97;
+    }
+
+    a {
+      color: #1f6e93;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #bdd4e2;
+    }
+
+    a:hover {
+      color: #0a4b6e;
+      border-bottom: 1px solid #0a4b6e;
+    }
+
+    @media (max-width: 640px) {
+      .privacy-header {
+        padding: 1.8rem 1.5rem;
+      }
+      .privacy-header h1 {
+        font-size: 1.9rem;
+      }
+      .content-inner {
+        padding: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .data-table th, .data-table td {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="privacy-card">
+  <div class="privacy-header">
+    <div class="app-badge">
+      <span>🎯</span> Word Guess · Daily Puzzle Game
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="last-updated">
+      <span>📅 Effective date: May 14, 2026</span>
+      <span class="pill">🔒 Your data is respected</span>
+    </div>
+  </div>
+  <div class="content-inner">
+    <p><strong>Word Guess</strong> is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile game on Google Play and other platforms. We believe in <strong>minimal data collection, transparency, and giving you full control</strong>.</p>
+
+    <div class="highlight-box">
+      ✨ <strong>Core promise</strong>: Word Guess does NOT collect any personally identifiable information unless you voluntarily contact us. We do not sell, rent, or trade your data. No shady trackers, no surprise sharing.
+    </div>
+
+    <h2>1. Information we collect</h2>
+    <p>Because your privacy matters, Word Guess is designed to function with <strong>zero mandatory personal data</strong>. However, certain technical or aggregated info might be used to improve the game experience:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Category</th><th>Details</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🎮 Game progress & stats</td><td>Your streak, highest score, daily puzzle completions</td><td>Stored locally on your device or anonymized cloud save (if implemented). No link to real identity.</td></tr>
+        <tr><td>📱 Device information (anonymized)</td><td>Device model, OS version, language preference</td><td>To optimize performance, fix bugs, and understand which devices our players use.</td></tr>
+        <tr><td>🍪 Crash & performance data</td><td>Aggregated crash logs, frame rate, game version</td><td>Improve stability and user experience (using Google Play Console & optional Firebase Crashlytics, anonymized).</td></tr>
+        <tr><td>🧾 No contact list / GPS / camera</td><td>We never access contacts, location, microphone, or photos.</td><td>Your device privacy remains intact.</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Children's privacy:</strong> Word Guess is suitable for all ages. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such data, contact us immediately so we can delete it.</p>
+
+    <h2>2. How we use your information</h2>
+    <p>Any information collected is strictly used to:</p>
+    <ul>
+      <li>📌 Provide, maintain, and improve Word Guess gameplay (daily puzzles, streak tracking).</li>
+      <li>📌 Analyze anonymous usage patterns to design better word challenges.</li>
+      <li>📌 Respond to customer support inquiries (via email or contact form).</li>
+      <li>📌 Prevent cheating or abuse while keeping the game fair for everyone.</li>
+    </ul>
+
+    <h2>3. Third-party services & advertising</h2>
+    <p><strong>Word Guess is proudly ad-free.</strong> We do not integrate third-party ad networks. No Google AdMob, no Unity Ads, no in-app purchase walls for core gameplay. However, the app may rely on the following essential services (each with its own privacy policy):</p>
+
+    <ul>
+      <li><strong>Google Play Services</strong> — optional leaderboards & achievements. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+      <li><strong>Firebase Crashlytics & Analytics</strong> (if enabled) — to collect anonymized crash reports. No personal identifiers are linked. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy</a></li>
+    </ul>
+
+    <p>These services may collect anonymized data such as device identifiers (e.g., Advertising ID) but <strong>only with your consent</strong> where required. We never pass any personal info to them. You can reset or opt out of Google Ad ID at any time in your Android settings.</p>
+
+    <div class="highlight-box">
+      📍 <strong>No third-party sharing</strong>: We never share your individual gameplay data with marketers, data brokers, or any external company. Period.
+    </div>
+
+    <h2>4. Data storage and security</h2>
+    <p>Your game progress is saved locally on your device by default. If cloud save is introduced in future updates (e.g., optional Google Drive backup), it will be end-to-end encrypted and requires your explicit permission. We implement industry-standard security measures to prevent unauthorized access, but remember — no digital system is 100% immune.</p>
+
+    <h2>5. Your rights & choices</h2>
+    <p>Depending on your location (including GDPR for European Economic Area, and CCPA for California residents), you have the following rights:</p>
+    <ul>
+      <li><strong>Right to access</strong> – Ask what data we hold about you (we store minimal to none).</li>
+      <li><strong>Right to deletion</strong> – Request deletion of any non-anonymized data.</li>
+      <li><strong>Right to opt-out</strong> – Disable analytics/crash reporting via in-app settings (if available) or uninstall the game.</li>
+      <li><strong>Right to be informed</strong> – This document serves that purpose, kept transparent and up to date.</li>
+    </ul>
+    <p>To exercise any right, simply email us using the contact section below. We'll respond within 30 days.</p>
+
+    <h2>6. Third-party links & external content</h2>
+    <p>Word Guess may contain links to our social media or support website. Those external sites have their own privacy policies, and we are not responsible for their practices. Always review their policies before interacting.</p>
+
+    <h2>7. Changes to this privacy policy</h2>
+    <p>We may update this Privacy Policy occasionally to reflect operational, legal, or regulatory changes. We will notify you by updating the "Effective date" at the top of this page. For significant modifications, we may provide in-app notice or a prompt before you continue playing. Continued use of Word Guess after changes means you accept the revised policy.</p>
+
+    <h2>8. Contact us</h2>
+    <p>If you have questions, concerns, or data-related requests, please reach out to our developer team. We read every message and value your trust.</p>
+    <div class="contact-email">
+      ✉️ ochoyomoses@gmail.com
+    </div>
+    <p style="margin-top: 0.5rem;">(Replace with your actual email address before publishing — this is a placeholder.)</p>
+    <p>You can also contact us via the Google Play Store support channel inside the app listing.</p>
+
+    <hr />
+
+    <h2>9. GDPR & CCPA specific disclosures (EU & California residents)</h2>
+    <p><strong>GDPR (for EEA users):</strong> The legal basis for processing any anonymized analytics data is your consent (obtained via first launch popup) or legitimate interest to improve the app. You have the right to lodge a complaint with your local supervisory authority.</p>
+    <p><strong>CCPA (for California residents):</strong> We do not sell personal information. In the past 12 months, we have not disclosed any personal information for business purposes. You have the right to non-discrimination for exercising your privacy rights.</p>
+    <p><strong>For all users:</strong> You can request a copy of any non-anonymized data (which is typically none) by contacting us. Since we don't collect name/email/phone, your privacy is naturally protected.</p>
+
+    <div class="footer-note">
+      ⚡ Word Guess — smart word puzzles, zero privacy trade-offs.<br />
+      &copy; 2026 Word Guess. All rights reserved.
+    </div>
+  </div>
+</div>
+</body>
+</html>
